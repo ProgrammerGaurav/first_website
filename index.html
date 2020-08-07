@@ -17,13 +17,11 @@
         <br>
         <br>
         <br>
-        <input placeholder="Say ''Ok Google''" type="text" />
+        <input placeholder="Say ''Ok Google''" type="text" id="google" />
         <br>
         <br>
         <br>
-        <a href="http://www.google.com">
-            <input type="submit" value="search">
-        </a>
+        <input type="submit" value="search" id="search">
         <input type="submit" value="i am feeling lucky" />
         <p>Google.co.in offered in:
             <br />
@@ -32,7 +30,11 @@
             </p>
         </p>
     </div>
-
+    <script>
+        document.getElementById('search').onclick = function () {
+            window.open('http://google.com/search?q=' + document.getElementById("google").value);
+        };
+    </script>
 </body>
 
 
